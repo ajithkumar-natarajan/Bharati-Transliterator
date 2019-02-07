@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:padding="10dp"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/main_fragment">
+
+    <!--<Spinner-->
+        <!--android:id="@+id/languages1"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_toLeftOf="@+id/changeLanguages"-->
+        <!--android:layout_toStartOf="@+id/changeLanguages"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignBottom="@+id/changeLanguages" />-->
+
+    <ImageButton
+        android:id="@+id/changeLanguages"
+        android:paddingTop="5dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:adjustViewBounds="true"
+        android:background="@color/transparent"
+        android:contentDescription="@string/google_lens_button_desc"
+        android:scaleType="fitCenter"
+        android:src="@drawable/google_lens" />
+
+    <!--<Spinner-->
+        <!--android:id="@+id/languages2"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignTop="@+id/languages1"-->
+        <!--android:layout_toRightOf="@+id/changeLanguages"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignBottom="@+id/changeLanguages" />-->
+
+    <EditText
+        android:id="@+id/textToTranslate"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_below="@+id/changeLanguages"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:ems="10"
+        android:hint="@string/write_word"
+        android:inputType="textAutoCorrect|textMultiLine"
+        android:maxLines="4"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/translatedText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="25sp"
+        android:textColor="@color/dark"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/textToTranslate"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toStartOf="@+id/addToFavourites1"
+        android:layout_toLeftOf="@+id/addToFavourites1"
+        android:textIsSelectable="true"/>
+
+    <ImageButton
+        android:id="@+id/addToFavourites1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/textToTranslate"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:adjustViewBounds="true"
+        android:background="@color/transparent"
+        android:contentDescription="@string/bookmark_icon"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_bookmark_black_24dp"
+        android:visibility="visible" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:scaleType="center"
+        android:elevation="10dp"
+        android:background="@color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/bharati_logo_coloured"
+        app:fabSize="normal" />
+
+</RelativeLayout>
